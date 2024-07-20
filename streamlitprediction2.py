@@ -11,7 +11,7 @@ from keras.metrics import MeanAbsoluteError
 from keras.regularizers import l1, l2
 from sklearn.metrics import mean_absolute_error, r2_score
 import tensorflow as tf
-pip freeze > requirements.txt
+
 def apply_moving_average(data_series, window_size=5):
     return data_series.rolling(window_size).mean()
 
