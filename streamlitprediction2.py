@@ -41,8 +41,8 @@ def run_models(data):
         scaler = StandardScaler()
         features_with_ma = features + ['COD F/D_MA']
         normalized_data = scaler.fit_transform(data[features_with_ma])
-        a = 0  
-        b = 200  
+        a = 20  
+        b = 100  
         data[features_with_ma] = (b - a) * (normalized_data - normalized_data.min(axis=0)) / (normalized_data.max(axis=0) - normalized_data.min(axis=0)) + a
 
         X_train, X_test, y_train, y_test = train_test_split(data[features_with_ma], data[target], test_size=0.2, random_state=42)
