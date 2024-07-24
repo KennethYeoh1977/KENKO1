@@ -21,8 +21,8 @@ def run_models(data):
     data['Normalized SS F/D'] = data['SS F/D']
     data['Normalized Zn F/D'] = data['Zn F/D']
 
-    features = ['pH F/D', 'COD F/D', 'SS F/D']
-    target = 'COD F/D'
+    features = ['pH F/D', 'COD F/D', 'SS F/D','Zn F/D']
+    target = 'COD F/D', 'Zn F/D'
 
     for column in features + [target]:
         if column not in data.columns:
