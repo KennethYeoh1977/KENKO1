@@ -109,7 +109,7 @@ def run_models(data):
         st.error(f"Error processing the data: {e}")
         return None
 
-st.title("Effluent Prediction")
+st.title("Effluent (COD / BOD) Prediction")
 
 st.markdown("""
 WORK SMART!  This App allows you to upload an Excel file, predict Industrial Effluent levels using Time-Delay Neural Networks (TDNN), and download the predictions for further A.I reporting. Designed by Ken.
